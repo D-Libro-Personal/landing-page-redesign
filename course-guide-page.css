@@ -52,6 +52,7 @@ body {
 .main-cover img {
   height: calc(min(3rem, 15vw, 10vh));
   margin-left: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
