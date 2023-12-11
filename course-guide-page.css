@@ -1,0 +1,344 @@
+:root {
+  --main-bg-color: #ffffff;
+  --user-feedback-bg-color: linear-gradient(
+    88deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  );
+  --sub-bg-color-1: #f1faff;
+  --main-text-color: #363636;
+  --btn-text-color: #363636;
+}
+
+.dark-mode {
+  --main-bg-color: #222222;
+  --user-feedback-bg-color: linear-gradient(122deg, #11003d 0%, #001255 85.38%);
+  --sub-bg-color-1: #363636;
+  --main-text-color: #ffffff;
+  --btn-text-color: #363636;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--main-text-color);
+}
+
+.top-bar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.main-cover {
+  background: linear-gradient(251deg, #ecafbc 51.1%, #e59cbe 51.14%);
+  height: 30vh;
+  position: relative;
+  top: 70px;
+}
+
+.main-cover h1 {
+  line-height: calc(max(2rem, 3vw));
+  font-size: calc(min(max(1.2rem, 3vw), max(1.2rem, 5vh), 3rem));
+  font-weight: 700;
+  text-align: left;
+  color: white;
+  padding-top: min(3vw, 3vh);
+  padding-left: 3vw;
+}
+
+.main-cover img {
+  height: calc(min(3rem, 15vw, 10vh));
+  margin-left: 20px;
+  text-align: center;
+}
+
+.course-guide-page-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-bg-color);
+}
+
+.course-guide-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  padding: 50px 20px;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  margin-top: 50px;
+  margin-right: auto;
+}
+
+.course-guide-page-container h2 {
+  font-size: 1.3rem;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.course-guide-page-container .target-learner {
+  border: solid #009af9 2px;
+  max-width: 800px;
+  margin: 30px 15px;
+  padding: 60px 30px 40px 40px;
+  background: url(img/learners.svg) 2% 2% / auto 50px no-repeat;
+}
+
+.course-guide-page-container ul {
+  font-size: 1.2rem;
+  list-style-type: disc;
+}
+
+.course-guide-page-container li {
+  margin: 20px 0px;
+}
+
+.course-guide-page-container p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 50px 10px;
+}
+
+.course-guide-page-container .img-insert {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+.course-guide-page-container .img-insert img {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.course-demo-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 5px;
+  background-color: white;
+  width: 250px;
+  border-radius: 5px;
+  margin: auto;
+  filter: drop-shadow(1px 1px 1px #999999);
+  color: var(--btn-text-color);
+}
+
+.course-demo-btn:hover {
+  filter: drop-shadow(5px 5px 5px #999999);
+}
+
+.course-demo-btn img {
+  height: 30px;
+}
+
+.course-outline-container {
+  width: 100%;
+}
+
+.course-outline-container summary {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  list-style: none;
+  background-color: var(--main-bg-color);
+  filter: drop-shadow(0px 0px 1px #90d4ff);
+  border-radius: 5px;
+  max-width: 800px;
+  gap: 10px;
+}
+
+.course-outline-container summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-outline-container summary img {
+  height: 1.5rem;
+  margin-left: auto;
+}
+
+.course-outline-container summary:hover {
+  filter: drop-shadow(5px 5px 5px #90d4ff);
+}
+
+.course-outline-container summary::before {
+  background-color: #009af9;
+  filter: drop-shadow(5px -5px #90d4ff);
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.details-open {
+  background-color: var(--sub-bg-color-1);
+  max-width: 800px;
+  padding: 20px;
+}
+
+.details-open ul {
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.details-open img {
+  margin-top: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.user-feedback-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--user-feedback-bg-color);
+  padding: 0px 20px;
+}
+
+.user-feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.user-feedback-container h2 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.callout {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  padding: 40px 20px 20px 20px;
+  min-width: 300px;
+  max-width: 800px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: url(img/blockquote.svg) 15px 15px no-repeat var(--sub-bg-color-1);
+  border-radius: 15px;
+}
+
+.callout:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid var(--sub-bg-color-1);
+}
+
+.user-feedback-container .calloput p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 100%;
+  gap: 1px;
+  position: fixed;
+  bottom: 25px;
+  padding-right: 15px;
+}
+
+.fixed-bottom-container .signup-botton-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  color: white;
+  background-color: #004cb6;
+  width: 200px;
+  border-radius: 5px;
+  margin: auto;
+  filter: drop-shadow(1px 1px 1px #009af9);
+  margin: 3px;
+  height: 30px;
+}
+
+.fixed-bottom-container .course-bottom-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  width: 200px;
+  border-radius: 5px;
+  margin: auto;
+  filter: drop-shadow(1px 1px 1px #009af9);
+  margin: 3px;
+  height: 30px;
+  color: var(--btn-text-color);
+}
+
+.course-bottom-btn:hover,
+.signup-botton-btn:hover {
+  filter: drop-shadow(5px 5px 5px #009af9);
+}
+
+.course-bottom-btn img {
+  height: 20px;
+}
+
+.animation-1 {
+  animation: fadeInScale linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 20%;
+}
+
+@keyframes fadeInScale {
+  from {
+    scale: 0 0;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}
+
+.animation-2 {
+  animation: fadeInOpacity steps(5, end);
+  animation-timeline: view();
+  animation-range: entry 0% cover 15%;
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
